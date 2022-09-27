@@ -18,13 +18,12 @@ return new class extends Migration
             $table->bigIncrements('book_id');
             $table->string('author', 32);
             $table->longText('title', 150);
-            $table->integer('pieces')->default(10);
             $table->timestamps();
         });
 
         //rekordok
         Book::create(['author' => 'Colleen Hoover', 'title' => 'It Ends With Us']);
-        Book::create(['author' => 'LoveCraft', 'title' => 'The Call of Cthulhul', 'pieces' => 20]);
+        Book::create(['author' => 'LoveCraft', 'title' => 'The Call of Cthulhul']);
     }
 
     /**
